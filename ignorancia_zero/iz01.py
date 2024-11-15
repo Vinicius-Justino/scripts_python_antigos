@@ -1,0 +1,8 @@
+n1 = int(input('digite o primeiro número:'))
+n2 = int(input('digite a sugundo número:'))
+print('{}+{}={}'.format(n1, n2, n1+n2))
+print('{}-{}={}'.format(n1, n2, n1-n2))
+print('{}x{}={}'.format(n1, n2 ,n1*n2))
+print('{}/{}={:.2f}'.format(n1, n2, n1/n2))
+print('a parte de inteira do quociente de {}/{} é {}'.format(n1, n2, n1//n2))
+print('o resto da conta {}/{} é {}'.format(n1, n2, n1%n2))
