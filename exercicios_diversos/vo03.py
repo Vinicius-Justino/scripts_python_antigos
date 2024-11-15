@@ -1,0 +1,6 @@
+print('       CADASTRO DE CLIENTES')
+print('0- Fim')
+print('1- Incluir')
+print('2- Alterar')
+print('3- Excluir')
+print('4- Consulta')

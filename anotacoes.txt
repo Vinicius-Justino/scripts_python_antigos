@@ -1,0 +1,369 @@
+IMPORT - 'import x' para integrar uma biblioteca de comandos em seu programa, 'x' é a biblioteca que
+você quer adicionar.
+
+FROM - 'from x import y' para integrar um comando específico em seu programa, 'x' é a biblioteca onde está o
+comando e 'y' é o comando que você quer, caso queira importar coloque um '*' como 'y'.
+
+AS - 'import x as y', para integrar uma biblioteca ou comando, mas usando outro nome, 'x' é a biblioteca ou comando e 
+'y' é a alíase.
+------------------------------------------------------------------------------------------------------------------------
+OPERAÇÕES BÁSICAS -  + = adição
+                     - = subtração
+                     * = multiplicação
+                     / = divisão
+                    ** = potênciação
+    **(1/2) ou sqrt(x) = radiciação
+                    // = divisão inteira
+                     % = resto da divisão inteira 
+
+NOTA: 'sqrt' só funciona com a biblioteca 'math', o número vai no lugar do 'x'.
+NOTA: ' x y= z' atribiu um novo valor a uma variável usando uma das operações a cima, 'x' é a variável, 'y' é
+a operação e 'z' é o número.
+NOTA: Para arredondar um número decimal 'x', use o comando 'round(x)'.
+NOTA: Para pegar o menor número dentre uma sequência de n números, coloque todos esses números dentro da função 'min()'.
+NOTA: Para pegar o maior número dentre uma sequência de n números, coloque todos esses números dentro da função 'max()'.
+------------------------------------------------------------------------------------------------------------------------
+STRINGS - É como o Python representa valores de texto, para definir uma string, coloque o texto que quiser entre aspas 
+simples ou duplas.
+
+PRINT - 'print(x)' para mostrar uma string 'x' na tela.
+
+EVAL - 'eval(x)' analisa uma string 'x' e toma as ações mais apropriadas.
+
+.FORMAT - 'print('{}'.format(x))' usa-se dentro do comando PRINT para incluir conteúdo em uma frase depois que 
+o programa começa a rodar, 'x' pode ser uma variável, um número, ou uma frase. Para limitar o números de casas decimais
+que aparecem em um número FLOAT. usa-se ':.xf' dentro das chaves, 'x' é o número de casas decimais que você escolher.
+
+FUNÇÕES COM STRINGS:
+	- .SPLIT - 'x.split(y)' separa as palavras dentro de uma string 'x' de acordo com o critério de separação 'y'.
+	- .LOWER - 'x.lower()' converte todas as letras de uma string 'x' em minúsculas.
+	- .UPPER - 'x.upper()' converte todas as letras de uma string 'x' em maiúsculas.
+	- .STARTSWITH - 'x.startswith(y)' verifica se a string 'x' começa com a substring 'y'.
+	- .FIND - 'x.find(y)' mostra a posição da primeira letra da primeira aparição da substring 'y' na string 'x',
+		  caso não tenha nenhum 'y' em 'x' retorna -1 como posição.
+	- .INDEX - 'x.index(y)' como a função '.find', mas, em caso de não encontrar 'y' em 'x', retorna um erro ao
+		   invés de -1.
+	- .COUNT - 'x.count(y)' conta quantas substrings 'y' têm dentro de uma string 'x'.
+	- .REPLACE - 'x.replace(y, z)' substitui todas as substring 'y' pela substring 'z' dentro de uma string 'x'.
+
+END - 'print('x', end='y')' determina o que acontece de um PRINT para o outro, o padrão é pular uma linha, mas você pode
+mudar o que acontece colocando algum dos comandos abaixo no lugar de 'y', por exemplo. 
+
+ATALHOS ÚTEIS COM PRINT:
+	\N - 'x \ny' separa 'x' e 'y' em duas linhas.
+	\T - 'x \ty' dá um 'tab' entre 'x' e 'y'.
+	\\ - '\\' imprime uma \.
+	\' - '\'' permite imprimir aspas simples dentro de aspas simples.
+	\" - '\"' permite imprimir aspas duplas dentro de aspas duplas.
+
+NOTA: Os comandos acima não são a única coisa que você pode usar com END.
+NOTA: 'y' é opcional, o separador padrão então seria um espaço vazio.
+------------------------------------------------------------------------------------------------------------------------
+INPUT - 'input('x')' para perguntar alguma coisa, a pergunta é 'x'. A resposta pode ser atribuída a uma variável
+usando 'y = input('x')', nesse caso, 'y' é a variável e x é a pergunta.
+------------------------------------------------------------------------------------------------------------------------
+VARIÁVEIS - Variáveis são valores que você define enquanto o programa está rodando, você pode definir esses valores de
+várias maneiras, por exemplo:
+    - INPUT: y = input('x')
+    - BIBLIOTECA RANDOM: 'x = random', ou 'x = randint'. Se quiser ser mais específico, pode definir um valor 
+mínimo e máximo para o sorteio usando 'x = random(y, z)', ou 'x = randint(y, z)', sendo 'y' o valor mínimo e 'z' o
+valor máximo do sorteio.
+NOTA: o comando 'random' sorteia números inteiros, por exemplo, em 'x = random(0, 10)' você pode receber
+valores como 'x = 0.1' ou 'x = 7.3254'. O comando 'randint' por outro lado, só sorteia números naturais, como
+'x = 0' e 'x = 7'.
+     -VARIÁVEIS: se suas variáveis forem numéros, você pode fazer mais variáveis a partir delas, por exemplo, em:
+a variável 'z' é a soma das variáveis 'x' e 'y', que nesse caso foram definidas usando o    'x = int(input('a')) 
+o método INPUT. Esse pedaço de código funciona com todos os métodos de definir variáveis e   y = int(input('b')) 
+todas as operações acima, exceto radiciação.                                                 z = x + y'
+
+TIPOS PRIMITIVOS - Tipos primitivos são os tipos de variáveis mais comuns em Python, esses são:
+     	-STRING(str): São as variáveis alfabéticas.
+     	-INTEIROS(int): São as variáveis numéricas inteiras.
+     	-FLOATING(float): São as variáveis numéricas reais.
+     	-BOOLEANOS(bool): Essas variáveis variam apenas entre 'True' e 'False'. 
+
+NOTA: Valores BOOLEANOS sempre tem que ser escritos com a primeira letra maiúscula.
+NOTA: Para identificar o tipo de uma variável, use o comando 'type(x)', 'x' é a variável.
+NOTA: Os métodos para definir variáveis citados acima não são os únicos jeitos de atribuir um valor a uma variável.
+NOTA: Você pode sim definir uma variável utilizando radiciação, mas não com o pedaço de código mostrado acima.
+NOTA: Existem outros tipos de variáveis.
+NOTA: Para definir variáveis sem um valor, atribua a elas o valor "None" (com a primeira letra sempre maiúscula).
+------------------------------------------------------------------------------------------------------------------------  
+IF - 'if x y z:' 'if' compara 2 itens que você escolher e ativa eventos pré programados diferentes dependendo do 
+resultado dessa comparação, 'x' e 'z' são os itens e 'y' é a comparação.
+Nesse exemplo, nós damos uma conta de adição para o jogador e conferimos se o resultado 'a = int(input('2 + 3'))
+está correto, comparando o resultado do dele (armazenao na variável a) com o             if a == 5:
+resultado correto, se os dois números forem iguais ativamos a frase 'você acertou' na      print('você acertou')
+tela, se o resultado não for igual ativamos a mensagem você errou.                       else:
+                                                                                           print('você errou')'
+
+ELIF - 'elif x y z:', 'elif' faz compara os mesmos itens de 'if', mas apenas quando a comparação de 'if' não
+estiver correta. Por exemplo, no código ao lado, o programa pede a    'idade = int(input('qual ano você nasceu?'))
+idade do usuário e compara esse número com outras idades para dizer    ano = int(input('que ano você está'))
+se este é idoso, adulto, adolescente ou criança. Como nós usamos o     if idade <= ano-60:
+o comando 'elif', o programa é executado da seguinte forma: primeiro       print('você é idoso')                     
+o programa confere se ano que o usuário nasceu foi a 60 anos ou mais   elif idade <= ano-18:
+do ano atual, se a comparação estiver correta, o programa diz que o        print('você é adulto')
+usuário é um idoso, mas se a comparação estiver errada, a idade é      elif idade <= ano-13:
+compara com 18, 13, e 0 a 12 anos, até descobrir qual a faixa etária       print('você é adolescente')
+do usuário. A diferença entre usar 'if' e 'elif', é que os 'if' são    else:
+sempre executados independendente do último resultado, os 'elif' são       print('você é criança')'
+executados apenas se todos os 'if' ou 'elif' acima estiverem errados. Se código fosse feito apenas com 'if' um
+usuário de 70 anos receberia 3 respostas, pois 70, é grande o suficiente para ser considerado adulto e adolescente
+pelo programa, mas como usamos 'elif', a comparação para assim que o número 70 é considerado idoso.
+
+COMPARAÇÕES - == = igual á
+              != = diferente de
+              <  = menor que
+              >  = maior que
+              <= = menor ou igual
+              >= = maior ou igual
+------------------------------------------------------------------------------------------------------------------------
+LISTAS - 'x = [a, b, c, ...]' usa-se para atribuir vários valores à mesma variável, x é a variável e 'a', 'b' e 'c' são
+os valores.
+
+VETORES - 'x[a]' usa-se para selecionar um valor específico de 'x', 'a' é a posição do valor na lista.
+
+SLICE - 'x[a:b:c]' usa-se para percorrer posições de uma lista, 'a' é a posição inicial, 'b' é a posição final e 'c' é
+o passo.
+
+LEN - 'len(x)' conta o número de vetores em uma lista 'x'.
+
+FUNÇÕES COM LISTAS:
+	- .COUNT - 'x.count(y)' conta o número de valores 'y' em uma lista 'x'.
+	- .REVERSE - 'x.reverse()' inverte a ordem dos vetores em uma lista 'x'. 
+	- .REMOVE - 'x.remove(y)' remove o primeiro valor 'y' de uma lista 'x.'
+	- .POP - 'x.pop(y)' mostra o elemento no vetor 'y' de uma lista 'x' e o remove.
+	- .INDEX - 'x.index(y)' mostra o número do vetor onde está o primeiro elemento 'y', caso não tenha nenhum 'y' 
+	           na lista, retorna uma mensagem de erro.
+	- .INSERT - 'x.insert(y, z)' coloca um valor 'z' em um vetor 'y' qualquer dentro da lista 'x', se 'y' já 
+		    estiver ocupado, transfere o atual valor de 'y' para 'y+1' e 'y+1' para 'y+2' até que 'y+n' seja 
+		    trasferido para um vetor vazio.
+	- .SORT - 'x.sort()' organiza os valores de uma lista 'x' em ordem crescente.
+	- .CLEAR - 'x.clear()' remove todos os valores de uma lista 'x'.
+	- .COPY - 'x = y.copy()' copia todos os valores de uma lista 'y' e os atribuia a uma lista independente 'x'.
+
+NOTA: 'c' é opicional, caso não queira definir um passo escreva 'x[a:b]'.
+NOTA: se o passo de um SLICE for negativo, ele percorre a lista da direita para a esquerda.
+------------------------------------------------------------------------------------------------------------------------
+FOR - 'for x in y:' 'for' é usado para executar um trecho de código em loop por um determinado número de vezes, 'x' é 
+uma variável que assume um valor da lista ou tupla 'y' a cada loop, começando em y[0], depois y[1], até percorrer todos 
+os  valores de 'y'.
+
+RANGE - 'for x in range(a, b, c):' RANGE percorre valores de 'a' até 'b' com um passo 'c', também pode ser escrito 
+como 'for x in range(len(y))', nesse caso, 'RANGE' percorre valores de 0 à 'len(y)'. 
+
+NOTA: Para fazer um loop RANGE de subtração use '-' antes de 'c'.
+NOTA:'a' e 'c' são opcionais, 'range(b)' percorre valores de 0 à 'b' com passo 1.
+NOTA: RANGE pode ser utilizado fora do comando FOR.
+NOTA: Você pode pular um ou mais loops utilizando o comando 'CONTINUE'.
+------------------------------------------------------------------------------------------------------------------------
+WHILE - 'while x y z:' 'while' também é usado para um loop indefinidas vezes. 'x' uma string, um número, ou uma variável, 
+'y' é uma comparação, e 'z' é uma string, um número, ou uma variável. Você pode parar loop 'while' de duas maneiras:
+       -COMPARAÇÃO: se a comparação de 'while' estiver falsa, o loop para automaticamente.    'while x != 10:
+Um exemplo de como alterar o resultado de uma comparação depois do início do loop, é               x = x+1'
+progamar um loop que roda enquanto 'x' é diferente de outro número, e diminuir essa diferença a cada loop. Nesse
+exemplo vai rodar por 10 loops, pois no loop 11, 'x' vai ser igual a 10, portanto, a comparação de 'while' estará
+incorreta.
+	
+	-BREAK: 'break' impõe uma outra comparação que, se estiver correta, para com o loop 'while'. Por exemplo:
+esse código é o mesmo do exemplo interior, mas dessa vez, não só 'x = 10' consegue parar o   'while x != 10:
+loop mas também 'x = 7', pois as linhas 3 e 4 dizem que 'se x = 7', o loop para.                   x = x+1
+                                                                                                   if x == 7:
+												        break
+NOTA: O comando 'break' também funciona com o comando 'for'.                            
+NOTA: Se 'x' for 'bool' não é permitido utilizar 'y' e 'z', apenas escreva 'while x:' 
+------------------------------------------------------------------------------------------------------------------------
+DEF - 'def x(y, z):' 'def' atribui um pedaço de código para uma função, 'x' é a função, 'y' e 'z' são argumento, por 
+exemplo 'x(1, 2)' ou 'x(7, 4)'.
+
+RETURN - 'return x, y, z, ...' indica quais as variáveis que são mostradas na tela quando usa-se 'print(x(y, z))'.
+
+GLOBAL - 'global x, y, z, ...' indica quais as variáveis que existem fora da função que vão ser usadas dentro dela.
+
+NONLOCAL - 'nonlocal x, y, z, ...' usado para funções dentro de funções, indica quais as variáveis que estão na função
+maior que vão ser usadas na função menor.
+
+LAMBDA - 'x = (lambda a, b, c, ... : )' é uma maneira mais fácil de escrever uma função com um objetivo simples, como
+somar números, etc...
+
+NOTA: 'y' e 'z' são opicionais, funções podem usar mais ou menos que duas variáveis, ou até nenhuma. No caso de 
+nenhuma, apenas deixe os parenteses vazios.
+NOTA: Para definir argumentos variáveis coloque um '*' antes do nome.
+NOTA: Para pré-definir um valor para um argumento coloque um '=' e um valor depois do nome.
+NOTA: Um argumento variável deve ser sempre o último  dos argumentos não-pré-definidos. 
+NOTA: Argumentos pré-definidos devem vir depois de todos os os argumentos não-pré-definidos.
+NOTA: Para definir uma função sem uma função definida utilize o comando "pass" dentro dela.
+------------------------------------------------------------------------------------------------------------------------
+.IS - 'x.isy()' usamos '.is' para dizer uma característica de uma variável, dependendo da terminação do '.is' que você
+usa. 'x' é a variável, 'y' é a terminação:
+	CARCTERÍSTICAS - .isalnum 	==> 	é alfanumérico
+			 .isalpha 	==> 	é alfabético
+			 .isascii 	==> 	é texto
+			 .isdecimal 	==> 	é um número inteiro
+			 .isdigit 	==> 	é todo numérico
+			 .isidentifier 	==> 	é um identificador válido
+			 .islower 	==> 	está em letras minúsculas
+			 .isupper 	==> 	está em letras maiúsculas
+			 .isnumeric 	==> 	é numérico
+			 .isprintable 	==>	é possível mostrar na tela
+			 .isspace 	==> 	é somente espaços
+			 .istitle 	==> 	está capitalizado
+
+NOTA: Um identificador válido não possui espaços e sempre começa com letras.
+NOTA: Uma palavra capitalizada tem a primeria letra maiúscula e todas outras minúculas.
+NOTA: Se a variável tem a característica que você usou, a tela te mostrará 'True', se a variável não tiver aquela
+carcterística te mostrará 'False'. Você pode usar essa mecânica com 'if' utilizando 'if x.isy == True:' ou 
+'if x.isy == False:'.
+------------------------------------------------------------------------------------------------------------------------
+COMPARAÇÕES COM TABELA VERDADE: 
+		   is = 'if x is y:' = 'x é y'?
+		   or = 'if x == z or y == z:' = 'ou x ou y é igual a z'?, ou 'x == y or x == z' = 'x é igual a y ou z'?
+		   and = 'if x == z and y == z:' = 'x e y são iguais a z'?, ou 'x == y and z' = 'x é igual a y e z'?
+		   in = 'if x in y:' = 'tem algum x em y'?
+		   not = usa-se para inverter o significado da variável, por exemplo 'if not x'  se 'x' for True:
+			'se for falso:', se 'x' for False: 'se for verdadeiro'.
+
+NOTA: 'x', 'y', e 'z' são variáveis.
+NOTA: Funciona com IF, WHILE e FOR.
+------------------------------------------------------------------------------------------------------------------------
+TUPLAS - 'x = (a, b, c, ...)' são como listas, mas com algumas diferenças, como, por exemplo:
+	- Não é possível alterar tuplas.
+	- Tuplas são formadas por parenteses.
+	- Funções que alteram uma sequência, como .REMOVE e .SORT não funcionam em tuplas. 
+------------------------------------------------------------------------------------------------------------------------
+ALTERANDO TIPOS E VALORES:
+	- LISTA(list): Cria uma lista a partir de um RANGE, uma tupla ou uma ou multiplas STRINGS.
+	- TUPLA(tuple): Cria uma tupla a partir de um RANGE, uma lista ou uma ou multiplas STRINGS.
+	- INTEIRO(int): Pode converter valores dos tipos STRING(se for um número), FLOATING, e BOOLEANO.
+	- DECIMAL(float): Pode converter valores dos tipos STRING(se for um número), INTEIRO, e BOOLEANO.
+	- STRING(str): Pode converter valores dos tipos INTEIRO, FLOATING e BOOLEANO.
+	- BOOLEANO(bool): Pode converter valores dos tipos STRING, INTEIRO e FLOATING.
+	- CARACTER(chr): Pode converter valores INTEIRAS para seu símbolo correspondente na tabela ASCII.
+	- POSIÇÃO(ord): Pode converter valores STRING para sua posição correspondente na tabela ASCII. 
+
+NOTA: Para aplicar esses comandos, utilize 'x(y)' onde 'x' é o comando e 'y' é o valor.
+NOTA: 'x(y)' não altera um valor, apenas mostra como ele ficaria se fosse alterado. para fazer uma mudança fixa, atribua 
+'x(y)' para uma variável.
+NOTA: Esses comando também funcionam com variáveis.
+------------------------------------------------------------------------------------------------------------------------
+ARQUIVOS - São só arquivos mesmo.
+
+OPEN - 'x = open('y.z', 'a')' cria ou abre um arquivo em python, 'x' é o arquivo, 'y' é nome do arquivo, 'z' é o formato
+e 'a' é o atributo dele.
+
+FORMATOS:
+	- '.txt' = bloco de notas
+	- '.py' = script em python
+
+ATRIBUTOS :
+	- Para o '.txt' e '.py':
+		- 'w' = cria um novo arquivo para escrita, caso o nome seja igual a um arquivo já existente, substitui
+			este arquivo pelo novo.
+		- 'r' = abre um arquivo já existente para leitura.
+		- 'a' = abre um arquivo já existente para escrita.
+
+FUNÇÕES COM ARQUIVOS:
+	- Para os atributo 'w' e 'a':
+		- .WRITE - 'x.write(y)' escreve uma string 'y' em um arquivo 'x'.
+		- .WRITELINES - 'x.writelines([a , b, c, ...])' escreve uma lista de strings em um arquivo 'x'.
+
+	- Para o atributo 'r':
+		- .READ - 'x.read(y)' mostra um número de bytes 'y' de um arquivo 'x' na tela á partir do primeiro byte 
+			  que ainda não foi lido.
+		- .READLINE - 'x.readline(y)' mostra apenas os bytes 'y' da primeira linha que ainda não foi lida de um
+			      arquivo 'x' á partir do primeiro byte que ainda não foi lido.
+		- .READLINES - 'x.readlines(y)' monta uma lista com um número 'y' strings de um arquivo 'x' á partir do
+				primeiro byte que ainda não foi lido da primeira linha que ainda não foi lida.
+		- .SEEK - 'x.seek(y)' pula um número de bytes 'y' em um arquivo 'x'.  
+
+	- Para todos os atributos:
+		- .CLOSE - 'x.close()' fecha um arquivo 'x'.
+
+NOTA: Os "comandos úteis" usados na função print também funcionam com o atributo 'w'.
+NOTA: Você só pode dar 1 atributo para um programa ao abri-lo/criá-lo, caso queira mudar, feche a abra de novo.
+-------------------------------------------------------------------------------------------------------------------------
+DICIONARIOS - 'x = {a: y, b: z, ...}' são como os dicionários da vida real: você tem uma palavra que recebe um 
+siginificado. Em Python, isso seria: uma chave que recebe um valor e, assim como num dicionario comum, quando você
+procura por um palavra você obtém seu significado. Você pode armazenar absolutamente tudo em dicionários.
+
+FUNÇÕES COM DICIONÁRIOS:
+	- .GET - 'x.get(y, z)' procura o valor da chave 'y' em um dicionário 'x', se não houver nenhum 'y', retorna 'z'.
+		 'z' é opcional.
+	- .ITEMS - 'x.items()' imprime uma lista de tuplas contendo todas as chaves de um dicionário 'x' e seus
+		   respectivos valores.
+	- .KEYS - 'x.keys()' imprime uma lista com todas as chaves de um dicionário 'x'.
+	- .VALUES - 'x.values()' imprime uma lista com todos os valores de um dicionário 'x'.
+	- .COPY - 'x.copy(y)' copia todas as chaves e valores de um dicionário 'x' e os atribui a um dicionário
+		  independente 'y'.
+	- .POP - 'x.pop(y)' imprime e remove uma chave 'y' em um dicionário 'x'.
+	- .POPITEM - 'x.popitem()' imprime e remove a primeira chave de um dicionário 'x'.
+	- .CLEAR - ''x.clear()' remove todas as chaves em um dicionário 'x'.
+	- .SETDEFAULT - 'x.setdefault(y, z)' procura pela chave 'y' em dicionário 'x', caso não tenha nenhum 'y',
+			atribui a 'y' o valor 'z' e adiciona 'y' ao dicionário. 'z' é opcional.
+
+NOTA: Para adicinar novos elementos a um dicionário, use a sintaxe 'x[y] = z'.
+-------------------------------------------------------------------------------------------------------------------------
+CLASS - 'class x(y):' usado para criar classes em python, que são usadas para criar objeto que interagem com o programa.
+'x' é a classe e 'y' é uma classe mãe.
+
+SUPER - 'super(x, self).z' permite acessar uma função 'y' da classe mãe de 'x' dento dela.
+
+ISSUBCLASS - 'issubclass(x, y)' retorna True se 'x' fo subclasse de 'y', caso contrário, retorna False.
+
+CALLABLE - 'callable(x)' retorna True se 'x' for chamável, caso contrário, retorna False.
+
+ID - 'id(x)' retorna o endereço de memória de um objeto.
+
+MÉTODOS COM CLASSES E OBJETOS:
+	- __INIT__ - 'def __init__(self, *x):' indica que essa função irá rodar assim que você criar a classe ou objeto.
+	- __DICT__ - 'x.__dict__' mostra todos os atributos de uma classe ou um objeto 'x' em forma de um dicionário.
+	- __STR__ - 'def __str__(self, *x):' indica que é essa a função que vai rodar sempre que o programa pedir uma
+		    string pra sua classe ou objeto.
+	- __ADD__ - 'def __add__(self, *x):' permite fazer operações de adição com seus objetos.
+	- __SUB__ - 'def __sub__(self, *x):' permite fazer operações de subtração com seus objetos.
+	- __DIV__ - 'def __div__(self, *x):' permite fazer operações de divisão com seu objetos.
+	- __MULT__ - 'def __ mult__(self, *x):' permite fazer operações de multiplicação com seus objetos.
+	- __DOC__ - 'x.__doc__' mostra a descrição definida para uma classe ou função qualquer 'x'.
+	- __BASES__ - 'x.__bases__' mostra a superclasse direta de 'x'.
+
+MÉTODOS DE COMPARAÇÃO:
+	- __LE__ - 'def __le__(self, *x)' permite fazer a comparação '<=' entre dois objetos e retorna os valores 
+		   pré-definidos para True ou False.
+	- __EQ__ - 'def __eq__(self, *x)' permite fazer a comparação '==' entre dois objetos e retorna os valores
+		   pré-definidos para True ou False.
+	- __GE__ - 'def __ge__(self, *x)' permite fazer a comparação '>=' entre dois objetos e retorna os valores
+		   pré-definidos pera True ou False.
+	- __LT__ - 'def __lt__(self, *x)' permite fazer a comparação '<' entre dois objetos e retorna os valores
+		   pré-definidos para True ou False.
+	- __GT__ - 'def __gt__(self, *x)' permite fazer a comparação '>' entre dois objetos e retorna os valores
+		   pré-definidos para True ou False.
+	- __NE__ - 'def __ne__(self, *x)' permite fazer a comparação '!=' entre dois objetos e retorna os valores
+		   pré-definidos para True ou False.
+
+NOTA: Caso a sua classe não tenhanenhuma classe mãe, coloque 'object' no lugar de 'y'.
+NOTA: 'self' é o próprio objeto.
+NOTA: Para deixar um atributo como privado, coloque '__' antes do nome dele, sempre que for se referir a ele.
+NOTA: 'callable' não é exclusivo para objetos. 
+------------------------------------------------------------------------------------------------------------------------
+VARIÁVEIS ESPECIAIS - '__x__' São variáveis que o python tem que você pode manipular para melhorar os seus programas.
+	- __NAME__ - '__name__' indica como o programa está sendo executado, se for como programa principal '__name__'
+		      recebe '__main__', se for como importação, recebe o nome que você definiu.
+------------------------------------------------------------------------------------------------------------------------
+TRY - 'try:' executa um trecho de código enquanto não houver nenhum erro.
+
+EXCEPT - 'except x:' executa um trecho de código se houver algum erro 'x' em try, mas apenas enquanto não houver nenhum 
+	 erro.
+
+ELSE - 'else:' executa um trecho de código se não houver nenhum erro em try, mas apenas enquanto não houver nenhum erro.
+
+FINALLY - 'finally:' sempre executa um trecho de código.
+
+RAISE - 'raise x' chama um erro 'x' dentro do programa.
+
+ASSERT - 'assert x, y, z, ...' verifica se as coisas que você colocou nesse comando estão funcionando do jeito que você
+	 queria, por exemplo, no caso de 'assert x > y', se 'x' não for maior que 'y' levanta-se um erro.
+
+NOTA: Para criar uma exceção própria, crie uma classe subclasse de "Exception".
+NOTA: Para colocar mais de uma exceção em um bloco except, coloque-as entre parenteses. '(x, y, z, ...)'.
+------------------------------------------------------------------------------------------------------------------------
